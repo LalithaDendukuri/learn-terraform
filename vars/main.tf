@@ -47,5 +47,5 @@ variable "fruitMap_Maps"{
 }
 }
 output "fruitMap_Maps"{
-     //  value = var.fruitMap_Maps.i
+     value = var.fruitMap_Maps[apple.price.value]
 }
