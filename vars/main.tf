@@ -46,6 +46,3 @@ variable "fruitMap_Maps"{
      price=2}
 }
 }
-output "fruitMap_Maps"{
-     value = var.fruitMap_Maps[apple.price.value]
-}
