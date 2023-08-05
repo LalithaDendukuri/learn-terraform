@@ -6,6 +6,13 @@ resource "aws_instance" "frontend" {
     Name = "frontend"
   }
 }
+resource "aws_route53_record" "frontend" {
+  zone_id = "Z0893432XKXNV5K4OIQB"
+  name    = "frontend-dev.dljrobo.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.frontend.private_ip]
+}
 
 resource "aws_instance" "mongodb" {
   ami           = "ami-03265a0778a880afb"
