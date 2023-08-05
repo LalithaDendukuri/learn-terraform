@@ -50,7 +50,5 @@ variable "fruitMap_Maps"{
 }
 }
 output "fruitMap_Maps"{
-     value = "Apple stock ${var.fruitMap_Maps["apple"].stock}
-     Apple type ${var.fruitMap_Maps["apple"].type}
-     Apple available forSale ${var.fruitMap_Maps["apple"].forSale} "
+     value = "Apple stock ${var.fruitMap_Maps["apple"].stock}      Apple type ${var.fruitMap_Maps["apple"].type}  Apple available forSale ${var.fruitMap_Maps["apple"].forSale} "
 }
