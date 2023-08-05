@@ -45,6 +45,7 @@ variable "fruitMap_Maps"{
      stock=200
      price=2}
 }
+}
 output "fruitMap_Maps"{
      //  value = var.fruitMap_Maps.i
 }
