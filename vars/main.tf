@@ -37,11 +37,11 @@ output "fruitMap_banana"{
 // Map variable map of map
 variable "fruitMap_Maps"{
     default = {
-    apple {
+    apple ={
      stock=100
      price =1
     }
-    banana{
+    banana ={
      stock=200
      price=2}
 }
