@@ -22,7 +22,9 @@ output "fruitList_second"{
 }
 // Map variable plain
 variable "fruitMap"{
-    default = { apple=100 banana=200  }
+    default = {
+     apple=100
+     banana=200  }
 }
 output "fruitMap_apple"{
        value = var.fruitMap["apple"]
