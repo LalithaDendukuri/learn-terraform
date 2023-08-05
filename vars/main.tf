@@ -39,13 +39,18 @@ variable "fruitMap_Maps"{
     default = {
     apple ={
      stock=100
-     price =1
+     type ="washington"
+     forSale= true
     }
     banana ={
-     stock=200
-     price=2}
+    stock=200
+    type ="washington"
+    forSale= true
+     }
 }
 }
 output "fruitMap_Maps"{
-     value = var.fruitMap_Maps["apple"].stock
+     value = "Apple stock ${var.fruitMap_Maps["apple"].stock}
+     Apple type ${var.fruitMap_Maps["apple"].type}
+     Apple available forSale ${var.fruitMap_Maps["apple"].forSale} "
 }
