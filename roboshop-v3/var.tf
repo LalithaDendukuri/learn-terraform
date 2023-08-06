@@ -21,8 +21,8 @@ variable "components" {
         instance_type = "t3.micro"
 
          }
-        reddis = {
-         name ="reddis"
+        redis = {
+         name ="redis"
         instance_type = "t3.micro"
          }
         cart = {
@@ -38,9 +38,14 @@ variable "components" {
         instance_type = "t3.micro"
 
         }
-        shippment = {
-         name="shippment"
+        shipping = {
+         name="shipping"
         instance_type = "t3.micro"
+
+         }
+         rabbitmq = {
+          name="rabbitmq"
+         instance_type = "t3.micro"
 
          }
         payment = {
