@@ -19,7 +19,9 @@ resource "aws_route53_record" "record" {
 }
 
 resource null_resource "ansible"{
-    depends_on = [aws_route53_record.record]
+    depends_on = [
+    aws_route53_record.record
+    ]
 
     provisioner "local-exec" {
       command = <<EOF
