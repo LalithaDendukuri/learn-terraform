@@ -8,16 +8,37 @@ variable "zone_id" {
 }
 variable "components" {
     default = {
-        frontend = { name="frontend" }
-        mongodb = { name="mongodb" }
-        catalogue = { name="catalogue" }
-        reddis = { name ="reddis" }
-        cart = { name="cart" }
-        user = { name="user" }
-        mysql = { name="mysql" }
-        shippment = { name="shippment" }
-        payment = { name="payment" }
-        dispatch = { name="dispatch" }
+        frontend = {
+        name = "frontend"
+        instance_type = "t3-micro"
+        }
+        mongodb = { name="mongodb"
+        instance_type = "t3-micro"
+        }
+        catalogue = { name="catalogue"
+        instance_type = "t3-micro"
+         }
+        reddis = { name ="reddis"
+        instance_type = "t3-micro"
+         }
+        cart = { name="cart"
+        instance_type = "t3-micro"
+         }
+        user = { name="user"
+        instance_type = "t3-micro"
+         }
+        mysql = { name="mysql"
+        instance_type = "t3-micro"
+        }
+        shippment = { name="shippment"
+        instance_type = "t3-micro"
+         }
+        payment = { name="payment"
+        instance_type = "t3-micro"
+         }
+        dispatch = { name="dispatch"
+        instance_type = "t3-micro"
+        }
 
 
     }
