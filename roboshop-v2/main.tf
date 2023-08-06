@@ -10,14 +10,23 @@ variable "instance_type" {
 variable "zone_id" {
     default = "Z0893432XKXNV5K4OIQB"
 }
-resource "aws_instance" "frontend" {
+variable "components" {
+    default = {
+        frontend = { name="frontend_dev" }
+        mongodb = { name="mongodb_dev" }
+
+    }
+}
+resource "aws_instance" "instance" {
+  for_each = var.components
   ami           = var.ami
   instance_type = var.instance_type
   vpc_security_group_ids =var.security_group
   tags = {
-    Name = "frontend"
+    Name = lookup(var.components,each.key,null)
   }
 }
+/*
 resource "aws_route53_record" "frontend" {
   zone_id = var.zone_id
   name    = "frontend-dev.dljrobo.online"
@@ -25,21 +34,5 @@ resource "aws_route53_record" "frontend" {
   ttl     = 30
   records = [aws_instance.frontend.private_ip]
 }
+ */
 
-resource "aws_instance" "mongodb" {
-   ami           = var.ami
-    instance_type = var.instance_type
-    vpc_security_group_ids =var.security_group
-  tags = {
-    Name = "mongodb"
-  }
-}
-resource "aws_instance" "catalogue"{
-  ami           = var.ami
-   instance_type = var.instance_type
-   vpc_security_group_ids =var.security_group
-  tags   = {
-    Name ="catalogue"
-  }
-
-}

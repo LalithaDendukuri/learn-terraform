@@ -1,4 +1,4 @@
-data "aws_ami" "example" {
+data "aws_ami_ids" "ami" {
   //most_recent      = true
   name_regex       = "Centos-*"
   owners           = ["973714476881"]
@@ -6,5 +6,5 @@ data "aws_ami" "example" {
 
 }
 output "ami"{
-    value= data.aws_ami.ami
+    value= data.aws_ami_ids.ami
 }
