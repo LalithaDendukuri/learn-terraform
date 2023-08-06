@@ -53,11 +53,11 @@ variable "components" {
         instance_type = "t3.micro"
 
          }
-        dispatch = {
+        /* dispatch = {
         name="dispatch"
         instance_type = "t3.micro"
 
-        }
+        } */
 
 
     }
